@@ -16,20 +16,20 @@ public class Ejercicio1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String[] meses = {"Agosto", "Octubre", "Diciembre"};
+        String[] meses = {"Agosto", "Octubre", "Diciembre"}; //Declaración de listas(strings y doubles)
         String[] sucursales = {"sucursal 1", "sucursal 2", "sucursal 3", "sucursal 4"};
-        double[] ventas_mes_1 = {4500.2, 5500.2, 6500.2, 2500.1};
+        double[] ventas_mes_1 = {4500.2, 5500.2, 6500.2, 2500.1}; 
         double[] ventas_mes_2 = {1500.2, 2500.2, 3500.2, 1500.1};
         double[] ventas_mes_3 = {2300.2, 1200.2, 4700.2, 3200.1};
         double [] venta_total_sucursal = new double [4];
         double [] venta_promedio_sucursal = new double [4];
         double total_ventas_todas_sucursales=0;
-        for(int cont =  0; cont < 4; cont ++){
-            venta_total_sucursal[cont] = ventas_mes_1[cont]+ventas_mes_2[cont]+ventas_mes_3[cont];
+        for(int cont =  0; cont < 4; cont ++){ //se cumple hasta que el contador llegue a 3
+            venta_total_sucursal[cont] = ventas_mes_1[cont]+ventas_mes_2[cont]+ventas_mes_3[cont];//proceso
             venta_promedio_sucursal[cont] = venta_total_sucursal[cont]/3;
-            total_ventas_todas_sucursales = total_ventas_todas_sucursales+venta_promedio_sucursal[cont];
+            total_ventas_todas_sucursales = total_ventas_todas_sucursales+venta_total_sucursal[cont];
         } 
-        for(int i = 0; i < 3; i ++){
+        for(int i = 0; i < 3; i ++){ //salida
             System.out.printf("\t\t%s",meses[i]);
         }
         System.out.printf("\tTotal\t\tPromedio\n\n");
